@@ -13,5 +13,9 @@ class User
     def log_out
       @logged_in = false
     end
+
+    def username
+      @username
+    end
   end
   

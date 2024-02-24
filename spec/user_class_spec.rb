@@ -1,4 +1,7 @@
+require 'user_class'
+
 RSpec.describe User do
+    let(:user) { User.new("Tyler") }
     describe "#log_in" do
       it "logs the user in" do
         user.log_in
@@ -8,6 +11,7 @@ RSpec.describe User do
   
     describe "#log_out" do
       it "logs the user out" do
+        user.log_in
         user.log_out
         expect(user.logged_in).to be false
       end
@@ -15,7 +19,7 @@ RSpec.describe User do
   
     describe "#username" do
       it "returns the correct username" do
-        expect(@username).to eq(username)
+        expect(user.username).to eq("Tyler")
       end
     end
   end
