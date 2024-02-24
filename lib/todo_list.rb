@@ -1,4 +1,5 @@
 class TodoList
+    attr_reader :todo
     def initialize
       @todos = []
     end
